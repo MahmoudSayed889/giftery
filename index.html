@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document </title>
+
+    <link rel="stylesheet" href="css/font family.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="up-navbar position-relative">
+            <div class="content bg-info py-1">
+                <div class="container ">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 text-center text-lg-left">
+                            <p class=" text-white m-0">Call <a class=" text-dark text-decoration-none" href="tel:+">+201221103868</a> (Sun-Thur From 9:30 To 5:30)</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class=" d-flex justify-content-center justify-content-lg-end flex-wrap">
+                                <a class=" nav-link text-white" href="http://">Manage Gift lists</a>
+                                <a class=" nav-link text-white" href="http://">Order Tracking</a>
+                                <a class=" nav-link text-white" href="http://"><span class=" d-flex align-items-center"><i class="fal fa-user-circle pr-1"></i>Login / Register</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow position-absolute px-2 py-1">
+                <i class="fas fa-chevron-up text-white"></i>
+            </div>
+        </div>
+    
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white animate__animated">
+            <div class="container">
+                <div class=" w-100">
+                    <div class=" d-flex flex-column w-100">
+                        <div class="navbar-main pt-1 d-flex justify-content-between align-items-center w-100">
+                            <div class=" d-lg-none d-flex align-items-center">
+                                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <i id="searchIcon" class="fal fa-search text-muted"></i>
+                            </div>
+                            <a class="navbar-brand" href="#"><img class=" img-fluid" src="img/logo-thegiftery.png"></a>
+                            <div id="searhBody"  class="search position-relative d-none d-lg-block animate__animated">
+                                <input class=" form-control border-0 pl-0 bg-transparent" type="text" placeholder="I'm shopping for ...">
+                                <i class="fal fa-search text-muted position-absolute pb-2 d-none d-lg-block"></i>
+                            </div>
+                            <div id="searchBodyBg" class=" position-fixed bg-dark"></div>
+            
+                            <div class=" d-flex">
+                                <i id="myCart" class="fal fa-shopping-bag text-muted pr-3"></i>
+                                <i id="myFav" class="fal fa-heart text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav pt-4 w-100 d-flex justify-content-lg-between">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark " href="#"><span>Sale</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#"><span>Summer</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <div class=" d-flex align-items-center">
+                                        <a class="nav-link text-dark pb-0 px-0" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Shop By Recipient
+                                        </a>
+                                        <i class="fas fa-chevron-down text-muted pl-1 pt-1"></i>
+                                    </div>
+                                  
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                      <a class="dropdown-item " href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#"><span>Shop By Occasion</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#"><span>Shop By Gift Type</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#"><span>Shop By Category</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#"><span>Gift Lists</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#"><span>Influencers</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" href="#"><span>Stores</span> <span class="sr-only">(current)</span></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                
+            
+                
+            </div>
+        </nav>
+
+        <div id="layerCart" class=" position-fixed">
+        </div>
+        <div id="cart" class=" position-fixed bg-white w-50 text-center">
+            <h2 class=" font-weight-bold mt-5">My Cart</h2>
+            <div class="content my-5 py-5">
+                <i class="fal fa-shopping-bag text-muted fa-6x my-4"></i>
+                <p class=" text-muted font-weight-bold mb-5">No products in the cart.</p>
+                <button class=" btn btn-info rounded-0 font-weight-bold">RETURN TO SHOP</button>
+            </div>
+            <i id="arrowRight" class="fas fa-chevron-right bg-white rounded-circle position-absolute"></i>
+        </div>
+
+        <div id="fav" class=" position-fixed bg-white w-50 text-center">
+            <h2 class=" font-weight-bold mt-5">Favourites</h2>
+            <div class="content my-5 py-5">
+                <i class="fal fa-heart text-muted fa-6x my-4"></i>
+                <p class=" text-muted font-weight-bold mb-5">No products in the wishlist.</p>
+                <button class=" btn btn-info rounded-0 font-weight-bold">RETURN TO SHOP</button>
+            </div>
+            <i id="arrowRight" class="fas fa-chevron-right bg-white rounded-circle position-absolute"></i>
+        </div>
+    
+    
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item carousel-item-summer">
+                    <div class="item container position-relative h-100 d-flex justify-content-around align-items-end align-items-xl-start align-items-lg-start">
+                        <img class=" w-50" src="img/Summer-2021-Element-15.png.png" alt="">
+                        <div class="item-center position-absolute d-flex flex-column align-items-center py-5">
+                            <img class=" w-50" src="img/Summer-Floaters-14.png.png" alt="">
+                            <button class="animate__animated animate__fadeInUpBig animate__fast btn btn-dark rounded-0 px-4 py-2">SHOP NOW</button>
+                        </div>
+                        <img class=" w-50" src="img/Bestbuy-watermelon-floater.png" alt="">
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-pink active">
+                    <div class="position-relative d-flex justify-content-end">
+                        <div class="item position-absolute">
+                            <p class="animate__animated animate__fadeInDownBig animate__fast text-muted font-weight-bold">GIFT COLLECTION</p>
+                            <p class="animate__animated animate__fadeInLeft animate__delay-1s h1 font-weight-bold my-3">The perfect<br> gift for everyone</p>
+                            <button class="animate__animated animate__fadeInUpBig animate__delay-1s btn btn-info rounded-0 px-4 py-2">SHOP NOW</button>
+                        </div>
+                        <img class=" img-fluid" src="img/Pink-Gifts-Homepage-banners-768x768.png" alt="">
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-soft-blue ">
+                    <div class="container position-relative h-100 d-flex justify-content-end align-items-center pt-5">
+                        <div class="item position-absolute">
+                            <p class="animate__animated animate__fadeInDownBig animate__fast text-muted font-weight-bold">SEND YOUR LOVE</p>
+                            <p class="animate__animated animate__fadeInLeft animate__delay-1s h1 font-weight-bold my-3">Say it with<br>Flowers & Chocolates</p>
+                            <button class="animate__animated animate__fadeInUpBig animate__delay-1s btn btn-danger rounded-0 px-4 py-2">SHOP NOW</button>
+                        </div>
+                        <div class=" pt-5">
+                            <img class=" img-fluid mt-5 animate__animated animate__fadeIn" src="img/flowers-and-chocolates-Homepage-Banner.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-item-blue">
+                    <div class="container position-relative h-100 d-flex justify-content-end">
+                        <div class="item position-absolute">
+                            <p class="animate__animated animate__fadeInDownBig animate__fast text-light font-weight-bold">ESSENTIALS COLLECTION</p>
+                            <p class="animate__animated animate__fadeInLeft animate__delay-1s h1 font-weight-bold my-3 text-white">Tabletop</p>
+                            <button class="animate__animated animate__fadeInUpBig animate__delay-1s btn btn-info rounded-0 px-4 py-2">SHOP NOW</button>
+                        </div>
+                        <img class=" img-fluid" src="img/Tableware-1-400x446.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev bg-dark rounded-circle p-3" href="#carouselExampleFade" role="button" data-slide="prev">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a class="carousel-control-next bg-dark rounded-circle p-3" href="#carouselExampleFade" role="button" data-slide="next">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </header>
+
+
+
+
+    <section id="links">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <div class="overflow-hidden ">
+                        <a href="#"><img class=" img-fluid" src="img/Thegiftery-Summer-Grills-BBQ-Gear.jpg"></a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="overflow-hidden">
+                        <a href="#"><img class=" img-fluid" src="img/Thegiftery-Summer-Personalized-gifts.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-4 d-flex align-items-end">
+                    <div class="overflow-hidden ">
+                        <a href="#"><img class=" img-fluid" src="img/Website-Banners-Summer-2021-02.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-end">
+                    <div class="overflow-hidden">
+                        <a href="#"><img class=" img-fluid" src="img/Website-Banners-Summer-2021-03.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-end">
+                    <div class="overflow-hidden">
+                        <a href="#"><img class=" img-fluid" src="img/Website-Banners-Summer-2021-04.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="trendingGift" class=" py-5">
+        <div class=" text-center">
+            <h2 class=" h3"><span>Trending</span> Gifts</h2>
+        </div>
+        <div class="container">
+            <ul class="nav nav-pills my-4 d-flex justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link text-muted font-weight-bold rounded-pill active" id="pills-arrivals-tab" data-toggle="pill" href="#pills-arrivals" role="tab" aria-controls="pills-arrivals" aria-selected="true">New Arrivals</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link text-muted font-weight-bold rounded-pill" id="pills-baskets-tab" data-toggle="pill" href="#pills-baskets" role="tab" aria-controls="pills-baskets" aria-selected="false">Gift Baskets</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link text-muted font-weight-bold rounded-pill" id="pills-selling-tab" data-toggle="pill" href="#pills-selling" role="tab" aria-controls="pills-selling" aria-selected="false">Best Selling</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link text-muted font-weight-bold rounded-pill" id="pills-sale-tab" data-toggle="pill" href="#pills-sale" role="tab" aria-controls="pills-sale" aria-selected="false">Sale</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-arrivals" role="tabpanel" aria-labelledby="pills-arrivals-tab">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/ATOH9036-copy-380x380.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/ATOH9081-copy-380x380.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/ATOH9161-copy-380x380.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/ATOH9219-copy-380x380.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/ATOH9228-copy-380x380.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/yellow-s.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/IMG-7417-copy-380x380.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-baskets" role="tabpanel" aria-labelledby="pills-baskets-tab">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="produ position-relative overflow-hidden">
+                                <img class=" w-100" src="img/WhatsApp-Image-2021-04-22-at-3.49.03-PM-380x380.jpeg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/WhatsApp-Image-2021-04-22-at-3.48.56-PM-380x380.jpeg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/WhatsApp-Image-2021-04-22-at-3.48.57-PM-380x380.jpeg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/WhatsApp-Image-2021-04-22-at-3.48.59-PM-380x380.jpeg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/WhatsApp-Image-2021-04-22-at-3.49.00-PM-380x380.jpeg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/WhatsApp-Image-2021-04-22-at-3.49.02-PM-380x380.jpeg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-white mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-selling" role="tabpanel" aria-labelledby="pills-selling-tab">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/Time-to-Z-Slippers--380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/SuperMan-Soft-Slippers-for-him--380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/IMG_0178-copy-380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/Harry-Potter-Slippers--380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/Black-Bow-Slippers--380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-sale" role="tabpanel" aria-labelledby="pills-sale-tab">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/21868367-51f9-4793-b573-8ec1f161b6de-copy-380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/d3361e56-b8f5-476d-9ad4-3d6934dc24fc-copy-380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/Best-Teacher-in-the-world-Mothers-day-basket-380x380.jpg.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/B66956021-380x380.png.png" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="product position-relative overflow-hidden">
+                                <img class=" w-100" src="img/WhatsApp-Image-2021-03-07-at-12.45.47-1-1-380x380.jpg" alt="">
+                                <div class="icon position-absolute d-flex flex-column justify-content-between align-items-end px-2 py-3">
+                                    <div class=" d-flex flex-column align-items-center">
+                                        <i class="far fa-heart text-dark mb-3"></i>
+                                        <i class="far fa-eye text-white bg-dark p-2 rounded-circle"></i>
+                                    </div>
+                                    <i class="fas fa-plus text-white bg-dark rounded-circle"></i>
+                                </div>
+                            </div>
+                            <div class=" item py-3">
+                                <h3 class=" h6 font-weight-bold">Product Name :</h3>
+                                <p class=" mb-2">Product Price :</p>
+                                <p>Product Category :</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="feature" class=" mb-4">
+        <div class=" text-center">
+            <h2 class=" h3"><span>Feature</span> Stores</h2>
+        </div>
+        <div class="">
+            <div class="owl-carousel owl-theme">
+                <div>
+                    <img class=" w-75" src="img/4-1.jpg" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/1-3.jpg" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/3-1.jpg" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/5.png" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/mercedez.png" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/MISS-L_GIFTERY-BANNER-LOGO-300-X-300-02-150x150-1.png" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/popsockets-logo-secondary-large-150x150-1.jpg" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/cadbury.png" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/Cilantro.png" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/Fauchon.png" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/HATHOUT-LOGO-150x150-1.jpg" alt="">
+                </div>
+                <div>
+                    <img class=" w-75" src="img/PHOTO-2020-12-13-12-30-48.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class=" main-footer border-top border-bottom py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-5">
+                        <img class=" w-75" src="img/logo-thegiftery.png" alt="">
+                        <ul class=" navbar-nav pt-4">
+                            <li>
+                                <span class=" nav-link">Heliopolis, Cairo.</span>
+                            </li>
+                            <li>
+                                <span class=" nav-link">(+2)0122-110-3868</span>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">customersupport@thegiftery.com</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">www.shop.thegiftery.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-5">
+                        <div class="d-flex">
+                            <a class=" nav-link text-dark pl-0" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class=" nav-link text-dark" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class=" nav-link text-dark" href="#"><i class="far fa-envelope"></i></a>
+                            <a class=" nav-link text-dark" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <ul class=" navbar-nav pt-4">
+                            <li>
+                                <a class=" nav-link text-dark" href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-dark" href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Shipping & Return policy</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Search Terms</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-5">
+                        <h3 class=" font-weight-bold h5">Newsletter</h3>
+                        <ul class=" navbar-nav pt-4">
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Customer Service</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Stores</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Contact Us</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 px-0">
+                        <div class=" d-flex mb-4">
+                            <input class=" form-control rounded-0" type="text" placeholder="Enter your email here">
+                            <button class=" btn btn-info rounded-0" type="submit">SUBSCRIBE</button>
+                        </div>
+                        <h3 class=" h6 font-weight-bold">Working days</h3>
+                        <ul class=" navbar-nav pt-3">
+                            <li>
+                                <span>Sunday - Thursday</span>
+                                <ul class=" navbar-nav text-center pt-1">
+                                    <li class=" border-top py-2">
+                                        <span>Open 10:00 AM</span>
+                                    </li>
+                                    <li class=" border-top py-2">
+                                        <span>Close 06:00 PM</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer py-4">
+            <div class=" container">
+                <div class="row align-items-center">
+                    <div class="col-xl-5 col-12 text-xl-left text-center">
+                        <span>© 2021 The Giftery.</span>
+                    </div>
+                    <div class="col-xl-7 col-12">
+                        <ul class=" nav mr-0 pr-0 d-flex justify-content-center justify-content-xl-end">
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Privacy & Cookies</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Terms & Conditions</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">Accessibility</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link text-dark" href="#">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <i id="btnTop" class="fas fa-chevron-up position-fixed shadow-sm rounded-circle bg-secondary text-white "></i>
+    </footer>
+
+    
+
+
+
+
+
+    
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
